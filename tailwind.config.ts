@@ -6,15 +6,24 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'onyx' : '#0E0E23',
+        'tufts-blue' : '#4255D4',
+        'bubbles' : '#e7e8ea',
+        'pale' : '#9b9ca7'
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'radial' : 'radial-gradient(circle, #1a2049 0%, #13162f 100%)'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy: 'class'
+    })
+  ],
 }
 export default config
