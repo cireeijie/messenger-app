@@ -178,7 +178,7 @@ const AuthForm = () => {
             </div>
             <div className='text-pale flex justify-center gap-1 text-[14px]'>
                 <div>
-                    {variant === 'LOGIN' ? 'New to Messenger' : 'Already have an account?'}
+                    {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have an account?'}
                 </div>
                 <div
                     className='underline hover:cursor-pointer'

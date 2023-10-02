@@ -6,6 +6,8 @@ html,
 body,
 :root {
   height: 100vh;
+  @apply 
+    bg-onyx
 }
 
 .title {

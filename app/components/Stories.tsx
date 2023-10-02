@@ -1,7 +1,7 @@
 const Stories = () => {
     return (
-        <div className="border-[2px] flex-1">
-            <h1>Stories Here...</h1>
+        <div className="flex-1 bg-radial rounded-tl-lg">
+            
         </div>
     );
 }
