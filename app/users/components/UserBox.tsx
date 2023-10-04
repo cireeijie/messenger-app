@@ -22,7 +22,7 @@ const UserBox: React.FC<UserBoxProps> = ({
             userId: data.id
         })
         .then(data => {
-            router.push(`/covnersations/${data.data.id}`)
+            router.push(`/conversations/${data.data.id}`)
         })
         .finally(() => setIsLoading(false))
     }, [data, router])
@@ -37,7 +37,7 @@ const UserBox: React.FC<UserBoxProps> = ({
                 items-center
                 cursor-pointer
                 hover:bg-white
-                hover:bg-opacity-50
+                hover:bg-opacity-25
                 max-w-md
                 p-2
                 rounded-sm

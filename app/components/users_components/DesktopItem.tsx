@@ -31,6 +31,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
                 className={clsx(`
                     group
                     flex
+                    justify-center
                     items-center
                     gap-2
                     p-2
@@ -45,7 +46,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
                     active ? 'text-tufts-blue bg-white bg-opacity-90' : 'text-white'
                 )}
             >
-                <Icon />
+                <Icon size={20}/>
                 <span className="sr-only">{label}</span>
             </Link>
         </li>

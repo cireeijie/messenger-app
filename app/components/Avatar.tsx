@@ -12,12 +12,13 @@ const Avatar: React.FC<AvatarProps> = ({
     user
 }) => {
     return (
-        <div className="relative">
+        <div className="relative w-10 h-10">
             <div 
                 className="
                     relative
                     flex
                     justify-center
+                    items-center
                     rounded-full
                     overflow-hidden
                     text-white
@@ -33,7 +34,7 @@ const Avatar: React.FC<AvatarProps> = ({
                         fill
                     />
                     :
-                    <IoPersonCircleOutline size={32}/>
+                    <IoPersonCircleOutline size={40}/>
                 }
             </div>
             <span 
@@ -42,10 +43,10 @@ const Avatar: React.FC<AvatarProps> = ({
                     block
                     rounded-full
                     bg-green-500
-                    ring-2
+                    ring-1
                     ring-white
-                    top-0
-                    right-0
+                    top-1
+                    right-1
                     h-2
                     w-2
                 "
