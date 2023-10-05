@@ -53,6 +53,7 @@ const Input: React.FC<InputProps> = ({
                 className="
                     text-pale
                     text-[14px]
+                    capitalize
                 "
             >
                 {label}
@@ -72,7 +73,8 @@ const Input: React.FC<InputProps> = ({
                         border-0
                         py-1.5
                         text-gray-900
-                        shadow-sm`,
+                        shadow-sm
+                        capitalize`,
                         errors[id] && 'focus:ring-rose-500',
                         disabled && 'opacity-50 cursor-default'
                     )}

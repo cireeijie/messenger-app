@@ -1,6 +1,7 @@
 'use client'
 
 import Avatar from "@/app/components/Avatar";
+import LoadingModal from "@/app/components/LoadingModal";
 import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -28,40 +29,45 @@ const UserBox: React.FC<UserBoxProps> = ({
     }, [data, router])
  
     return (
-        <div
-            onClick={handleClick}
-            className="
-                group
-                flex
-                gap-2
-                items-center
-                cursor-pointer
-                hover:bg-white
-                hover:bg-opacity-25
-                max-w-md
-                p-2
-                rounded-sm
-                ease-in-out
-                duration-300
-            "
-        >
-            <Avatar user={data}/>
+        <>  
+            {isLoading && (
+                <LoadingModal />
+            )}
             <div
+                onClick={handleClick}
                 className="
+                    group
                     flex
                     gap-2
+                    items-center
+                    cursor-pointer
+                    hover:bg-white
+                    hover:bg-opacity-25
+                    max-w-md
+                    p-2
+                    rounded-sm
+                    ease-in-out
+                    duration-300
                 "
             >
+                <Avatar user={data}/>
                 <div
                     className="
-                        text-sm
-                        text-white
+                        flex
+                        gap-2
                     "
                 >
-                    {data.name}
+                    <div
+                        className="
+                            text-sm
+                            text-white
+                        "
+                    >
+                        {data.name}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
  

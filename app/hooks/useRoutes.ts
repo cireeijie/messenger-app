@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import { HiChat, HiUser } from "react-icons/hi"
+import { HiChat } from "react-icons/hi"
 import { 
     HiArrowLeftOnRectangle,
     HiUsers 

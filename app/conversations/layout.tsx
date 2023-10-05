@@ -1,4 +1,5 @@
 import getCoversations from "../actions/getConversations";
+import getUsers from "../actions/getUsers";
 import Sidebar from "../components/users_components/Sidebar";
 import ConversationList from "./components/ConversationList";
 
@@ -9,6 +10,7 @@ export default async function ConversationsLayout({
 }) {
 
     const conversations = await getCoversations()
+    const users = await getUsers()
 
     return (
         <div className="bg-radial h-full">
@@ -19,7 +21,10 @@ export default async function ConversationsLayout({
                         flex-1
                     "
                 >
-                    <ConversationList initialItems={conversations} />
+                    <ConversationList 
+                        users={users}
+                        initialItems={conversations} 
+                    />
                     {children}
                 </div>
             </Sidebar>
