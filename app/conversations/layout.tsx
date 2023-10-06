@@ -11,9 +11,6 @@ export default async function ConversationsLayout({
     const conversations = await getCoversations()
     const users = await getUsers()
 
-    console.log(conversations)
-    console.log(users)
-
     return (
         <div className="bg-radial h-full">
             <Sidebar>
