@@ -65,7 +65,7 @@ const Body: React.FC<BodyProps> = ({
     }, [conversationId])
 
     return (
-        <div className="flex-1 overflow-y-auto body-hover">
+        <div className="flex-1 overflow-y-auto body-hover mt-[74px] p-2">
             {
                 messages.map((message, i) => (
                     <MessageBox
