@@ -24,7 +24,6 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 
     useEffect(() => {
         const newDate = format(new Date(data.createdAt), 'p')
-        
         setDate(newDate)
     }, [data.createdAt])
 
@@ -48,8 +47,8 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 
     const message = clsx(
         'text-sm w-fit overflow-hidden',
-        isOwn ? 'bg-onyx text-white' : 'bg-pale',
-        data.image ? 'rounded-md p-0' : 'rounded-full py-2 px-3'
+        isOwn ? 'bg-tufts-blue text-white' : 'bg-onyx text-white',
+        data.image ? 'rounded-md bg-onyx p-0' : 'rounded-full py-2 px-3'
     )
 
     return (
