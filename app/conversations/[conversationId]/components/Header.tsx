@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({
                         <Avatar user={otherUser} />
                     )}
                     <div className="ml-2 flex flex-col">
-                        <div className="text-white text-md">
+                        <div className="text-white text-md capitalize">
                             {conversation.name || otherUser.name}
                         </div>
                         <div className="text-[12px] text-pale">

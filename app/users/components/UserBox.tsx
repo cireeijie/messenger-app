@@ -61,6 +61,7 @@ const UserBox: React.FC<UserBoxProps> = ({
                         className="
                             text-sm
                             text-white
+                            capitalize
                         "
                     >
                         {data.name}

@@ -2,8 +2,6 @@
 
 import { User } from "@prisma/client";
 import UserBox from "./UserBox";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 interface UserListProps {
     items: User[]
@@ -12,12 +10,6 @@ interface UserListProps {
 const UserList: React.FC<UserListProps> = ({
     items
 }) => {
-    const router = useRouter()
-
-    useEffect(() => {
-        router.refresh()
-    }, [items, router])
-
     return (
         <div 
             className="
