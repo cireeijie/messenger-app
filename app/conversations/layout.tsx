@@ -8,6 +8,7 @@ export default async function ConversationsLayout({
 }: {
     children: React.ReactNode
 }) {
+
     const conversations = await getCoversations()
     const users = await getUsers()
 

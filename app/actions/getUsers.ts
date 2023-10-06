@@ -6,6 +6,7 @@ const getUsers = async () => {
     const session = await getSession()
 
     if(!session?.user?.email) {
+        console.error("No user email")
         return []
     }
 
@@ -23,6 +24,7 @@ const getUsers = async () => {
 
         return users
     } catch(error: any) {
+        console.error('Error fetching:', error)
         return []
     }
 }
