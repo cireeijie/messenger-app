@@ -78,7 +78,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                     cursor-pointer
                     hover:bg-white
                     hover:bg-opacity-25
-                    max-w-md
+                    lg:max-w-md
                     p-2
                     rounded-sm
                     ease-in-out

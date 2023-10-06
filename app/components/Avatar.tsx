@@ -45,21 +45,19 @@ const Avatar: React.FC<AvatarProps> = ({
             </div>
             {isActive && (
                 <span 
-                    className="
+                    className={`
                         absolute
                         block
                         rounded-full
                         bg-green-500
                         ring-1
                         ring-white
-                        top-1
-                        right-1
                         h-2
                         w-2
-                    "
+                        ${user?.image ? 'top-0 right-0' : 'top-1 right-1'}
+                    `}
                 />
-            )
-            }
+            )}
             
         </div>
     );

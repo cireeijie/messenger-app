@@ -101,13 +101,13 @@ const ConversationList: React.FC<ConversationListProps> = ({
                     bg-opacity-50
                     backdrop-blur-md
                     p-4
-                    flex
+                    lg:flex
                     flex-col
                     w-full
                     min-w-[200px]
-                    max-w-[300px]
+                    lg:max-w-[300px]
                 `,
-                    // isOpen ? 'hidden': 'flex'
+                    isOpen ? 'hidden': 'flex'
                 )}
             >
                 <div className="flex justify-between items-center p-2">

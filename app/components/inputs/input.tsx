@@ -74,7 +74,7 @@ const Input: React.FC<InputProps> = ({
                         py-1.5
                         text-gray-900
                         shadow-sm
-                        capitalize`,
+                        `,
                         errors[id] && 'focus:ring-rose-500',
                         disabled && 'opacity-50 cursor-default'
                     )}

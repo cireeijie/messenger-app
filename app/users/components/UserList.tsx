@@ -22,7 +22,7 @@ const UserList: React.FC<UserListProps> = ({
                 flex-col
                 w-full
                 min-w-[200px]
-                max-w-[300px]
+                lg:max-w-[300px]
             "
         >
             <div>

@@ -10,6 +10,7 @@ import Avatar from "@/app/components/Avatar";
 import clsx from "clsx";
 import ProfileDrawer from "./ProfileDrawer";
 import AvatarGroup from "@/app/components/AvatarGroup";
+import useActiveList from "@/app/hooks/useActiveList";
 
 interface HeaderProps {
     conversation: Conversation & {
@@ -22,14 +23,16 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
     const otherUser = useOtherUser(conversation)
     const [ drawerOpen, setDrawerOpen ] = useState(false)
+    const { members } = useActiveList()
+    const isActive = members.indexOf(otherUser?.email!) !== -1;
 
     const statusText = useMemo(() => {
         if(conversation.isGroup) {
             return `${conversation.users.length} members`
         }
 
-        return 'Active'
-    }, [conversation])
+        return isActive ? 'Active' : 'Offline'
+    }, [conversation, isActive])
 
     return (
         <>
@@ -42,9 +45,9 @@ const Header: React.FC<HeaderProps> = ({
                 <div className="flex items-center">
                     <Link 
                         href='/conversations'
-                        className="text-white lg:hidden md:flex sm:flex"
+                        className="text-white flex lg:hidden"
                     >
-                        <HiChevronLeft size={32} />
+                        <HiChevronLeft size={28} />
                     </Link>
                     {conversation.isGroup ? (
                         <AvatarGroup users={conversation.users} />
