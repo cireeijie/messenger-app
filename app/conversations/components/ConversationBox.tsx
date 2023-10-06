@@ -107,7 +107,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                         items-center      
                     "
                 >
-                    <p className="text-white text-sm">
+                    <p className="text-white text-sm capitalize">
                         {data.name || otherUser.name}
                     </p>
                     {lastMessage?.createdAt && (
