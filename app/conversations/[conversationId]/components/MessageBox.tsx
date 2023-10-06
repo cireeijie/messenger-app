@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { format } from "date-fns";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
 
 interface MessageBoxProps {
@@ -20,6 +20,13 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 }) => {
     const session = useSession()
     const [ imageModalOpen, setImageModalOpen ] = useState(false)
+    const [ date, setDate ] = useState<string>()
+
+    useEffect(() => {
+        const newDate = format(new Date(data.createdAt), 'p')
+        
+        setDate(newDate)
+    }, [data.createdAt])
 
     const isOwn = session?.data?.user?.email === data?.sender?.email
     const seenList = (data.seen || [])
@@ -56,7 +63,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
                         {data.sender.name}
                     </div>
                     <div className="text-[10px] text-pale">
-                        {format(new Date(data.createdAt), 'p')}
+                        {date}
                     </div>
                 </div>
                 <div className={message}>

@@ -98,8 +98,6 @@ const AuthForm = () => {
         .finally(() => setIsLoading(false))
     }
 
-    console.log(isLoading)
-
     return ( 
         <div className='container max-w-[400px] p-7 text-center'>
             <div className='flex justify-center mb-4'>
