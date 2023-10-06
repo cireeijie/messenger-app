@@ -14,7 +14,7 @@ const getCurrentUser = async () => {
             where: {
                 email: session.user.email as string
             }
-        })
+        },)
 
         if(!currentUser) {
             return null
