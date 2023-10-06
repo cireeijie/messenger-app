@@ -51,6 +51,8 @@ const MessageBox: React.FC<MessageBoxProps> = ({
         data.image ? 'rounded-md bg-onyx p-0' : 'rounded-full py-2 px-3'
     )
 
+    const seen = clsx('capitalize')
+
     return (
         <div className={container}>
             <div className={avatar}>
@@ -92,7 +94,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
                 </div>
                 {isLast && isOwn && seenList.length > 0 && (
                     <div className="text-[10px] text-pale">
-                        {`Seen by ${seenList}`}
+                        {`Seen by `} <span className="capitalize">{seenList}</span>
                     </div>
                 )}
             </div>
