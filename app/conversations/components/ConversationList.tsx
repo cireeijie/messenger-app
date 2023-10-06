@@ -28,8 +28,6 @@ const ConversationList: React.FC<ConversationListProps> = ({
 
     const router = useRouter()
 
-    console.log('deployed')
-
     const {
         conversationId,
         isOpen
