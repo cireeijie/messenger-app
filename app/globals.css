@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply
+    bg-tufts-blue
+    bg-opacity-0
+    rounded-full
+    hover:bg-opacity-100
+    ease-in-out
+    duration-200
+    transition-opacity
+}
+
+.body-hover:hover > ::-webkit-scrollbar-thumb {
+  @apply
+    bg-opacity-100
+}
+
 html,
 body,
 :root {

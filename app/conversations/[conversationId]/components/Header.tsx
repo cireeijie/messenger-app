@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({
                 isOpen={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
             />
-            <div className="flex items-center justify-between p-4 bg-onyx bg-opacity-50">
+            <div className="flex items-center justify-between p-4 bg-onyx fixed top-0 right-0 left-0 z-50">
                 <div className="flex items-center">
                     <Link 
                         href='/conversations'

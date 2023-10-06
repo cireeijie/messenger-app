@@ -60,6 +60,7 @@ const Form = () => {
                     errors={errors}
                     required
                     placeholder="Write a message"
+                    autoComplete={false}
                 />
                 <button
                     type="submit"

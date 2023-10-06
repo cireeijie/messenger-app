@@ -16,8 +16,9 @@ interface InputProps {
     type?: string;
     required?: boolean;
     register: UseFormRegister<FieldValues>
-    errors: FieldErrors
+    errors: FieldErrors;
     disabled?: boolean;
+    autoComplete?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -28,6 +29,7 @@ const Input: React.FC<InputProps> = ({
     register,
     errors,
     disabled,
+    autoComplete
 }) => {
 
     useEffect(() => {

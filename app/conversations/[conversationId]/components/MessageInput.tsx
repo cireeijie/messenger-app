@@ -8,7 +8,8 @@ interface MessageInputProps {
     type?: string;
     required?: boolean;
     register: UseFormRegister<FieldValues>
-    errors: FieldErrors
+    errors: FieldErrors;
+    autoComplete?: boolean;
 }
 
 const MessageInput: React.FC<MessageInputProps> = ({
@@ -17,14 +18,15 @@ const MessageInput: React.FC<MessageInputProps> = ({
     type,
     required,
     register,
-    errors
+    errors,
+    autoComplete
 }) => {
     return (
         <div className="relative w-full">
             <input 
                 id={id}
                 type={type}
-                autoComplete={id}
+                autoComplete={autoComplete ? id : 'off'}
                 {...register(id, {required})}
                 placeholder={placeholder}
                 className="w-full rounded-full py-2 px-4 focus:outline-none bg-onyx text-white"
